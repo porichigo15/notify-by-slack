@@ -39,5 +39,5 @@ pipeline {
 }
 
 def notify(status) {
-    slackSend(channel: "#notify", message: "Message from Jenkins Pipeline")
+    slackSend(message: "Message from Jenkins Pipeline")
 }
