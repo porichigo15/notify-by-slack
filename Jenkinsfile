@@ -30,14 +30,15 @@ pipeline {
 
     post {
         success {
-            notify()
+            notify("success")
         }
         failure {
-            notify()
+            notify("failure")
         }
     }
 }
 
-def notify() {
+def notify(status) {
+    // Can use status to proceed condition
     slackSend(message: "Message from Jenkins Pipeline")
 }
